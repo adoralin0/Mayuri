@@ -110,10 +110,35 @@ export default function MayuriHomepage() {
             Catering
           </a>
 
-          <div style={{ display: "flex", alignItems: "center", gap: 12, fontSize: 30, fontWeight: 700 }}>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" /></svg>
+          <a 
+            href="tel:+18504029993" 
+            style={{ 
+              display: "flex", 
+              alignItems: "center", 
+              gap: 12, 
+              fontSize: 30, 
+              fontWeight: 700, 
+              color: S.dark, // Default color
+              textDecoration: "none", 
+              transition: "color 0.2s ease" // Smooth hover transition
+            }}
+            onMouseEnter={e => e.currentTarget.style.color = S.olive}
+            onMouseLeave={e => e.currentTarget.style.color = S.dark}
+          >
+            <svg 
+              width="24" 
+              height="24" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="currentColor" // Matches the text color automatically
+              strokeWidth="2.5" 
+              strokeLinecap="round" 
+              strokeLinejoin="round"
+            >
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+            </svg>
             +(850) 402-9993
-          </div>
+          </a>
 
           <div style={{ display: "flex", gap: 16 }}>
             <a href="https://www.doordash.com/store/mayuri-indian-restaurant-tallahassee-1070545/" target="_blank" rel="noreferrer"
@@ -145,15 +170,19 @@ export default function MayuriHomepage() {
           </h1>
           <p style={{ fontSize:28, fontWeight:500, color:"#6b7280", margin:"0 0 36px" }}>Serving Tallahassee since 2016.</p>
           {/* ── HERO BUTTON (Full Menu) ── */}
-          <a href="#" style={{ 
-              display:"inline-block", 
+          <a 
+            href="https://www.google.com/search?q=mayuri+tallahassee&oq=mayuri+tallahassee+&gs_lcrp=EgZjaHJvbWUyCggAEEUYFhgeGDkyCAgBEEUYJxg7MgcIAhAAGIAEMggIAxAAGBYYHjIICAQQABgWGB4yBggFEEUYPDIGCAYQRRg8MgYIBxBFGDzSAQg0NjYyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#vhid=33:/g/12648s1_7&vssid=menu-viewer-entrypoint" 
+            target="_blank" 
+            rel="noreferrer"
+            style={{ 
+              display: "inline-block", 
               background: S.olive, 
               color: S.dark, 
-              textDecoration:"none", 
-              borderRadius:999, 
-              padding:"16px 44px", 
-              fontSize:38, 
-              fontWeight:700, 
+              textDecoration: "none", 
+              borderRadius: 999, 
+              padding: "16px 44px", 
+              fontSize: 38, 
+              fontWeight: 700, 
               fontFamily: S.font,
               transition: "transform 0.2s, background 0.2s" 
             }}
@@ -268,23 +297,30 @@ export default function MayuriHomepage() {
             </p>
             <div>
               <a href="tel:+18504029993"
-              style={{ 
-                display: "inline-block", 
-                background: S.sage, 
-                color: S.dark, 
-                textDecoration: "none", 
-                borderRadius: 999, 
-                padding: "18px 38px", 
-                fontSize: "32px", 
-                fontWeight: 700, 
-                fontFamily: S.font,
-                transition: "all 0.2s"
-              }}
-              onMouseEnter={e => e.target.style.background = S.olive}
-              onMouseLeave={e => e.target.style.background = S.sage}
-            >
-              Call Us
-            </a>
+                style={{ 
+                  display: "inline-block", 
+                  background: S.sage, 
+                  color: S.dark, 
+                  textDecoration: "none", 
+                  borderRadius: 999, 
+                  padding: "18px 38px", 
+                  fontSize: "32px", 
+                  fontWeight: 700, 
+                  fontFamily: S.font,
+                  transition: "all 0.2s ease" // Smooth transition for background and transform
+                }}
+                onMouseEnter={e => {
+                  e.target.style.background = S.olive;
+                  e.target.style.transform = "translateY(-3px)"; // Added a small lift effect
+                }}
+                onMouseLeave={e => {
+                  e.target.style.background = S.sage;
+                  e.target.style.transform = "translateY(0)";
+                }}
+              >
+                Call Us
+              </a>
+              
             </div>
             
             <div style={{ marginTop: 20, borderTop: "1px solid #eee", paddingTop: 15 }}>
