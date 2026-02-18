@@ -52,7 +52,9 @@ export default function MayuriHomepage() {
 
   return (
     <div style={{ fontFamily: S.font, background:"#fff", color: S.dark, overflowX:"hidden" }}>
+      
 
+      {/* ── NAV ── */}
       {/* ── NAV ── */}
       <nav style={{ 
         display: "flex", 
@@ -74,41 +76,30 @@ export default function MayuriHomepage() {
             />
           </div>
           <div style={{ display: "flex", gap: 40 }}>
-            {[["Favorites", "#favorites"], ["Event Hosting", "#events"], ["About", "#about"]].map(([l, h]) => (
-              <a key={l} href={h} style={{ fontSize: 30, fontWeight: 500, color: S.dark, textDecoration: "none", fontFamily: S.font, transition: "color 0.2s" }}
+            {/* Keeping Catering here as a standard link */}
+            {[["Favorites", "#favorites"], ["Event Hosting", "#events"], ["About", "#about"], ["Catering", "#events"]].map(([l, h]) => (
+              <a 
+                key={l} 
+                href={h} 
+                style={{ 
+                  fontSize: 30, 
+                  fontWeight: 500, 
+                  color: S.dark, 
+                  textDecoration: "none", 
+                  fontFamily: S.font, 
+                  transition: "color 0.2s" 
+                }}
                 onMouseEnter={e => e.target.style.color = S.olive}
-                onMouseLeave={e => e.target.style.color = S.dark}>{l}</a>
+                onMouseLeave={e => e.target.style.color = S.dark}
+              >
+                {l}
+              </a>
             ))}
           </div>
         </div>
         
         <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
-          <a 
-            href="http://localhost:3000/catering#events" 
-            style={{ 
-              background: S.sage, 
-              color: S.dark,
-              textDecoration: "none",
-              borderRadius: 999, 
-              padding: "10px 28px", 
-              fontSize: 30, 
-              fontWeight: 600, 
-              cursor: "pointer", 
-              fontFamily: S.font,
-              display: "inline-block",
-              transition: "all 0.2s ease"
-            }}
-            onMouseEnter={e => {
-              e.target.style.background = S.olive;
-              e.target.style.transform = "translateY(-2px)";
-            }}
-            onMouseLeave={e => {
-              e.target.style.background = S.sage;
-              e.target.style.transform = "translateY(0)";
-            }}
-          >
-            Catering
-          </a>
+          {/* THE GREEN CATERING PILL BUTTON HAS BEEN REMOVED FROM HERE */}
 
           <a 
             href="tel:+18504029993" 
@@ -118,9 +109,9 @@ export default function MayuriHomepage() {
               gap: 12, 
               fontSize: 30, 
               fontWeight: 700, 
-              color: S.dark, // Default color
+              color: S.dark, 
               textDecoration: "none", 
-              transition: "color 0.2s ease" // Smooth hover transition
+              transition: "color 0.2s ease" 
             }}
             onMouseEnter={e => e.currentTarget.style.color = S.olive}
             onMouseLeave={e => e.currentTarget.style.color = S.dark}
@@ -130,7 +121,7 @@ export default function MayuriHomepage() {
               height="24" 
               viewBox="0 0 24 24" 
               fill="none" 
-              stroke="currentColor" // Matches the text color automatically
+              stroke="currentColor" 
               strokeWidth="2.5" 
               strokeLinecap="round" 
               strokeLinejoin="round"
