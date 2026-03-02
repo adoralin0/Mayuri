@@ -377,7 +377,7 @@ export default function MayuriHomepage() {
           </a>
 
           <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
-            {/* DoorDash Button Hover */}
+            {/* DoorDash Button Hover. */}
             <a href="https://www.doordash.com/store/mayuri-indian-restaurant-tallahassee-1070545/" target="_blank" rel="noreferrer"
               style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 56, height: 44, background: S.sage, borderRadius: 8, textDecoration: "none", transition: "all 0.2s ease" }}
               onMouseEnter={e => {
@@ -404,7 +404,7 @@ export default function MayuriHomepage() {
                 e.target.style.transform = "translateY(0)";
               }}
             >
-              <img src={UE_LOGO} alt="Uber Eats" style={{ width: 40, height: "auto", objectFit: "contain", pointerEvents: "none" }} />
+              <img src={UE_LOGO} alt="Uber Eats " style={{ width: 40, height: "auto", objectFit: "contain", pointerEvents: "none" }} />
             </a>
           </div>
         </div>
