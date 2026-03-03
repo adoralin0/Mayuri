@@ -106,8 +106,8 @@ export default function MayuriHomepage() {
             style={{ 
               display: "flex", 
               alignItems: "center", 
-              gap: 12, 
-              fontSize: 30, 
+              gap: 10, 
+              fontSize: 20, 
               fontWeight: 700, 
               color: S.dark, 
               textDecoration: "none", 
