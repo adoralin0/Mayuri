@@ -367,10 +367,10 @@ export default function MayuriHomepage() {
           ))}
         </div>
 
-        <div style={{ display: "flex", flexDirection: "column", gap: 12, alignItems: "flex-end" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 10, alignItems: "flex-end" }}>
           {/* Phone Number Hover */}
           <a href="tel:+18504029993" 
-            style={{ fontSize: 26, color: S.sage, textDecoration: "none", fontWeight: 600, transition: "color 0.2s" }}
+            style={{ fontSize: 22, lineHeight: 1, whiteSpace: "nowrap", color: S.sage, textDecoration: "none", fontWeight: 600, transition: "color 0.2s" }}
             onMouseEnter={e => e.target.style.color = "#fff"}
             onMouseLeave={e => e.target.style.color = S.sage}
           >
