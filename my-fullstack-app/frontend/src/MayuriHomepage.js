@@ -99,38 +99,7 @@ export default function MayuriHomepage() {
         </div>
         
         <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
-          {/* THE GREEN CATERING PILL BUTTON HAS BEEN REMOVED FROM HERE */}
-
-          <a 
-            href="tel:+18504029993" 
-            style={{ 
-              display: "flex", 
-              alignItems: "center", 
-              gap: 12, 
-              fontSize: 16, 
-              fontWeight: 700, 
-              color: S.dark, 
-              textDecoration: "none", 
-              transition: "color 0.2s ease" 
-            }}
-            onMouseEnter={e => e.currentTarget.style.color = S.olive}
-            onMouseLeave={e => e.currentTarget.style.color = S.dark}
-          >
-            <svg 
-              width="24" 
-              height="24" 
-              viewBox="0 0 24 24" 
-              fill="none" 
-              stroke="currentColor" 
-              strokeWidth="2.5" 
-              strokeLinecap="round" 
-              strokeLinejoin="round"
-            >
-              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
-            </svg>
-            <span style={{ marginLeft: 6 }}>+(850) 402-9993</span>
-          </a>
-
+          {/* Delivery buttons */}
           <div style={{ display: "flex", gap: 16 }}>
             <a href="https://www.doordash.com/store/mayuri-indian-restaurant-tallahassee-1070545/" target="_blank" rel="noreferrer"
               style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 85, height: 60, background: S.sage, borderRadius: 10, textDecoration: "none", transition: "all 0.2s" }}
