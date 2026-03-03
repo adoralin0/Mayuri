@@ -6,16 +6,16 @@ const UE_LOGO  = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQEAAADECAYAAACf
 
 // Food photo URLs (hosted via upload service)
 const IMGS = {
-  hero_food: "/images/hero_food.png",
-  biryani:   "/images/biryani.png",
-  kebab:     "/images/kebab.png",
-  curries:   "/images/curries.png",
-  tandoori:  "/images/tandoori.png",
-  thali:     "/images/thali.png",
-  catering:  "/images/catering.png",
-  event2:    "/images/event2.png",
-  event1:   "/images/event1.png",
-  mayurilogo: "/images/mayuri_logo.png",
+  hero_food: "images/hero_food.png",
+  biryani:   "images/biryani.png",
+  kebab:     "images/kebab.png",
+  curries:   "images/curries.png",
+  tandoori:  "images/tandoori.png",
+  thali:     "images/thali.png",
+  catering:  "images/catering.png",
+  event2:    "images/event2.png",
+  event1:   "images/event1.png",
+  mayurilogo: "images/mayuri_logo.png",
 };
 
 const ZZ = ({ w=44, h=22, sw=2.5, color="#1a1a1a" }) => (
@@ -69,10 +69,10 @@ export default function MayuriHomepage() {
       }}>
         <div style={{ display: "flex", alignItems: "center", gap: 60 }}>
           <div style={{ display: "flex", alignItems: "center" }}>
-            <img 
-              src="/images/mayuri_logo.png" 
-              alt="Mayuri Logo" 
-              style={{ height: "180px", width: "auto", objectFit: "contain" }} 
+            <img
+              src="images/mayuri_logo.png"
+              alt="Mayuri Logo"
+              style={{ height: "180px", width: "auto", objectFit: "contain" }}
             />
           </div>
           <div style={{ display: "flex", gap: 40 }}>
