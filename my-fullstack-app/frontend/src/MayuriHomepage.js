@@ -298,7 +298,8 @@ export default function MayuriHomepage() {
                   fontSize: "32px", 
                   fontWeight: 700, 
                   fontFamily: S.font,
-                  transition: "all 0.2s ease" // Smooth transition for background and transform
+                  transition: "all 0.2s ease", // Smooth transition for background and transform
+                  marginBottom: 32
                 }}
                 onMouseEnter={e => {
                   e.target.style.background = S.olive;
@@ -314,7 +315,7 @@ export default function MayuriHomepage() {
               
             </div>
             
-            <div style={{ marginTop: 20, borderTop: "1px solid #eee", paddingTop: 15 }}>
+            <div style={{ marginTop: 32, borderTop: "1px solid #eee", paddingTop: 24 }}>
               <h3 style={{ fontSize: "40px", fontWeight: 700, margin: "0 0 4px", fontFamily: S.font }}>
                   Want to Host Events?
               </h3>
