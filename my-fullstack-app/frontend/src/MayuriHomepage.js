@@ -336,15 +336,6 @@ export default function MayuriHomepage() {
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: 10, alignItems: "flex-end" }}>
-          {/* Phone Number Hover */}
-          <a href="tel:+18504029993" 
-            style={{ fontSize: 16, lineHeight: 1, whiteSpace: "nowrap", color: S.sage, textDecoration: "none", fontWeight: 600, transition: "color 0.2s" }}
-            onMouseEnter={e => e.target.style.color = "#fff"}
-            onMouseLeave={e => e.target.style.color = S.sage}
-          >
-            +(850) 402-9993
-          </a>
-
           <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
             {/* DoorDash Button Hover. */}
             <a href="https://www.doordash.com/store/mayuri-indian-restaurant-tallahassee-1070545/" target="_blank" rel="noreferrer"
