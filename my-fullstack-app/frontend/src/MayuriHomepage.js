@@ -99,7 +99,6 @@ export default function MayuriHomepage() {
         </div>
         
         <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
-          {/* Delivery buttons */}
           <div style={{ display: "flex", gap: 16 }}>
             <a href="https://www.doordash.com/store/mayuri-indian-restaurant-tallahassee-1070545/" target="_blank" rel="noreferrer"
               style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 85, height: 60, background: S.sage, borderRadius: 10, textDecoration: "none", transition: "all 0.2s" }}
