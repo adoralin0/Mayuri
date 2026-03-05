@@ -1,9 +1,55 @@
 /* Mobile-friendly overrides for Mayuri homepage */
+/* Ensure page doesn't overflow on small screens */
+html, body {
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Consistent scroll target for all section links (nav covers top) */
+#favorites, #about, #events {
+  scroll-margin-top: 100px;
+}
+
+/* Nav: spacing between links and delivery buttons */
+.mayuri-nav {
+  gap: 28px;
+}
+@media (min-width: 769px) {
+  .mayuri-nav-buttons {
+    margin-left: 24px;
+  }
+}
+
+/* Logo and delivery icons: scale consistently with viewport (override inline styles) */
+.mayuri-nav-logo img {
+  height: clamp(72px, 12vw, 180px) !important;
+  width: auto !important;
+  object-fit: contain !important;
+}
+.mayuri-nav-buttons a {
+  width: clamp(56px, 5.5vw, 95px) !important;
+  height: clamp(44px, 4.5vw, 60px) !important;
+  min-width: 44px !important;
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.mayuri-nav-buttons img {
+  width: clamp(28px, 3.2vw, 58px) !important;
+  height: auto !important;
+  object-fit: contain !important;
+  pointer-events: none !important;
+}
+
 @media (max-width: 900px) {
   .mayuri-nav {
     flex-wrap: wrap !important;
     padding: 12px 20px !important;
-    gap: 16px !important;
+    gap: 20px !important;
+  }
+  .mayuri-nav-buttons {
+    margin-left: 0 !important;
   }
   .mayuri-nav-main {
     flex-wrap: wrap !important;
@@ -12,8 +58,7 @@
     justify-content: space-between;
   }
   .mayuri-nav-logo img {
-    height: 100px !important;
-    max-height: 28vw;
+    height: clamp(72px, 18vw, 100px) !important;
   }
   .mayuri-nav-links {
     gap: 20px !important;
@@ -22,8 +67,11 @@
     font-size: 18px !important;
   }
   .mayuri-nav-buttons a {
-    width: 70px !important;
-    height: 50px !important;
+    width: clamp(44px, 10vw, 70px) !important;
+    height: clamp(44px, 10vw, 50px) !important;
+  }
+  .mayuri-nav-buttons img {
+    width: clamp(28px, 6vw, 48px) !important;
   }
 }
 
@@ -34,8 +82,15 @@
     text-align: center;
   }
   .mayuri-nav-links {
-    flex-wrap: wrap !important;
-    justify-content: center;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 12px 24px;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .mayuri-nav-links a {
+    white-space: nowrap;
   }
   .mayuri-hero {
     flex-direction: column !important;
@@ -104,7 +159,7 @@
   }
   .mayuri-events {
     min-width: 0 !important;
-    padding: 20px 0 !important;
+    padding: 48px 20px 56px !important;
   }
   .mayuri-events-inner {
     flex-direction: column !important;
@@ -112,7 +167,7 @@
   .mayuri-events-text {
     flex: none !important;
     width: 100% !important;
-    padding: 24px 20px !important;
+    padding: 24px 20px 32px !important;
     min-width: 0 !important;
   }
   .mayuri-events-text h2 {
@@ -160,5 +215,52 @@
   .mayuri-nav-buttons {
     width: 100%;
     justify-content: center;
+  }
+  .mayuri-hero-text h1 {
+    font-size: clamp(28px, 8vw, 44px) !important;
+  }
+  .mayuri-hero-text a[href*="google"] {
+    font-size: 18px !important;
+    padding: 12px 24px !important;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .mayuri-events-text a[href^="tel"] {
+    font-size: 20px !important;
+    padding: 12px 24px !important;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Very small phones: tighter padding and tap-friendly links */
+@media (max-width: 360px) {
+  .mayuri-nav {
+    padding: 10px 12px !important;
+  }
+  .mayuri-nav-links a {
+    font-size: 16px !important;
+    padding: 8px 4px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+  .mayuri-hero {
+    padding: 24px 16px 40px !important;
+  }
+  .mayuri-favorites,
+  .mayuri-about {
+    padding: 32px 12px 40px !important;
+  }
+  .mayuri-favorites-grid,
+  .mayuri-about-inner {
+    padding: 0 12px !important;
+  }
+  .mayuri-footer {
+    padding: 24px 16px !important;
   }
 }
