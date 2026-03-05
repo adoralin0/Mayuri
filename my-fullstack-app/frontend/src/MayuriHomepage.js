@@ -45,18 +45,64 @@ const S = {
 export default function MayuriHomepage() {
   useEffect(() => {
     const style = document.createElement("style");
-    style.textContent = `@font-face { font-family: 'Gentona'; src: url('${FONT_B64}') format('opentype'); font-weight: 100 900; }`;
+    style.textContent = `@font-face { font-family: 'Gentona'; src: url('${FONT_B64}') format('opentype'); font-weight: 100 900; }
+@media (max-width: 1024px) {
+  .mayuri-homepage .mayuri-nav { padding: 8px 24px !important; }
+  .mayuri-homepage .mayuri-nav-links { gap: 20px !important; }
+  .mayuri-homepage .mayuri-nav-logo img { height: 100px !important; }
+  .mayuri-homepage .mayuri-hero { flex-direction: column !important; padding: 32px 24px 48px !important; min-height: auto !important; text-align: center !important; }
+  .mayuri-homepage .mayuri-hero-left { width: 100% !important; }
+  .mayuri-homepage .mayuri-hero-right { width: 100% !important; margin-top: 24px !important; }
+  .mayuri-homepage .mayuri-hero .mayuri-hero-left p { font-size: 22px !important; }
+  .mayuri-homepage .mayuri-favorites-grid { grid-template-columns: repeat(2, 1fr) !important; padding: 0 24px !important; gap: 16px !important; }
+  .mayuri-homepage .mayuri-fav-card .mayuri-fav-img { height: 220px !important; }
+  .mayuri-homepage .mayuri-about-inner { flex-direction: column !important; padding: 0 24px !important; gap: 32px !important; }
+  .mayuri-homepage .mayuri-about-inner > div:first-child { flex: none !important; }
+  .mayuri-homepage .mayuri-events { min-width: 0 !important; padding: 20px 0 0 !important; }
+  .mayuri-homepage .mayuri-events-inner { flex-direction: column !important; }
+  .mayuri-homepage .mayuri-events-inner .mayuri-events-text { flex: none !important; padding: 24px !important; }
+  .mayuri-homepage .mayuri-events-inner .mayuri-events-text h2 { font-size: 36px !important; }
+  .mayuri-homepage .mayuri-events-inner .mayuri-events-text p { font-size: 20px !important; }
+  .mayuri-homepage .mayuri-events-inner .mayuri-events-text h3 { font-size: 28px !important; }
+  .mayuri-homepage .mayuri-footer { padding: 32px 24px !important; flex-direction: column !important; align-items: flex-start !important; text-align: left !important; }
+}
+@media (max-width: 900px) {
+  .mayuri-homepage .mayuri-nav { padding: 8px 16px !important; }
+  .mayuri-homepage .mayuri-nav > div:first-child { flex-wrap: wrap !important; gap: 12px !important; }
+  .mayuri-homepage .mayuri-nav-links { display: none !important; }
+  .mayuri-homepage .mayuri-hero h1 { font-size: clamp(36px, 10vw, 72px) !important; }
+  .mayuri-homepage .mayuri-favorites-grid { grid-template-columns: 1fr !important; }
+  .mayuri-homepage .mayuri-fav-card .mayuri-fav-title { font-size: 24px !important; }
+  .mayuri-homepage .mayuri-fav-card .mayuri-fav-desc { font-size: 20px !important; }
+}
+@media (max-width: 600px) {
+  .mayuri-homepage .mayuri-nav-logo img { height: 72px !important; }
+  .mayuri-homepage .mayuri-hero { padding: 24px 16px 36px !important; }
+  .mayuri-homepage .mayuri-hero .mayuri-hero-left p { font-size: 18px !important; }
+  .mayuri-homepage .mayuri-hero a[href*="google"] { padding: 12px 28px !important; font-size: 28px !important; }
+  .mayuri-homepage .mayuri-favorites-grid { padding: 0 16px !important; }
+  .mayuri-homepage #favorites h2 { font-size: clamp(28px, 6vw, 40px) !important; margin-bottom: 32px !important; }
+  .mayuri-homepage #about h2 { font-size: clamp(22px, 4vw, 28px) !important; }
+  .mayuri-homepage .mayuri-about-inner p { font-size: 20px !important; }
+  .mayuri-homepage .mayuri-events-inner .mayuri-events-text { padding: 20px 16px !important; }
+  .mayuri-homepage .mayuri-events-inner .mayuri-events-text h2 { font-size: 28px !important; }
+  .mayuri-homepage .mayuri-events-inner .mayuri-events-text a { padding: 14px 28px !important; font-size: 26px !important; }
+  .mayuri-homepage .mayuri-footer { padding: 24px 16px !important; }
+  .mayuri-homepage .mayuri-footer > div:last-child { flex-direction: column !important; gap: 12px !important; }
+  .mayuri-homepage .mayuri-footer p { font-size: 20px !important; }
+  .mayuri-homepage .mayuri-footer a { font-size: 22px !important; }
+}`;
     document.head.appendChild(style);
     return () => document.head.removeChild(style);
   }, []);
 
   return (
-    <div style={{ fontFamily: S.font, background:"#fff", color: S.dark, overflowX:"hidden" }}>
+    <div className="mayuri-homepage" style={{ fontFamily: S.font, background:"#fff", color: S.dark, overflowX:"hidden" }}>
       
 
       {/* ── NAV ── */}
       {/* ── NAV ── */}
-      <nav style={{ 
+      <nav className="mayuri-nav" style={{ 
         display: "flex", 
         alignItems: "center", 
         justifyContent: "space-between", 
@@ -68,14 +114,14 @@ export default function MayuriHomepage() {
         borderBottom: "none" 
       }}>
         <div style={{ display: "flex", alignItems: "center", gap: 60 }}>
-          <div style={{ display: "flex", alignItems: "center" }}>
+          <div className="mayuri-nav-logo" style={{ display: "flex", alignItems: "center" }}>
             <img
               src="images/mayuri_logo.png"
               alt="Mayuri Logo"
               style={{ height: "180px", width: "auto", objectFit: "contain" }}
             />
           </div>
-          <div style={{ display: "flex", gap: 40 }}>
+          <div className="mayuri-nav-links" style={{ display: "flex", gap: 40 }}>
             {/* Keeping Catering here as a standard link */}
             {[["Favorites", "#favorites"], ["Event Hosting", "#events"], ["About", "#about"], ["Catering", "#events"]].map(([l, h]) => (
               <a 
@@ -120,9 +166,9 @@ export default function MayuriHomepage() {
 
       {/* ── HERO ── */}
       
-      <section style={{ position:"relative", display:"flex", alignItems:"center", justifyContent:"space-between", padding:"48px 48px 64px", minHeight:"88vh", overflow:"hidden" }}>
+      <section className="mayuri-hero" style={{ position:"relative", display:"flex", alignItems:"center", justifyContent:"space-between", padding:"48px 48px 64px", minHeight:"88vh", overflow:"hidden" }}>
         <div style={{ position:"absolute", top:"50%", left:"42%", transform:"translate(-50%,-50%)", width:640, height:640, border:"1.5px solid #d8ddd0", borderRadius:"50%", pointerEvents:"none", zIndex:0 }} />
-        <div style={{ width:"52%", position:"relative", zIndex:1 }}>
+        <div className="mayuri-hero-left" style={{ width:"52%", position:"relative", zIndex:1 }}>
           <div style={{ marginBottom:28 }}><ZZ w={44} h={22} sw={2.5} color={S.dark}/></div>
           <h1 style={{ fontSize:"clamp(72px,27vw,106px)", fontWeight:900, lineHeight:1.0, letterSpacing:"-2px", margin:"0 0 18px", textTransform:"uppercase", fontFamily: S.font }}>
             THE CAPITAL'S<br/>BEST INDIAN FOOD
@@ -158,7 +204,7 @@ export default function MayuriHomepage() {
           </a>
           <div style={{ position:"absolute", bottom:-70, left:20 }}><ZZ w={44} h={22} sw={2.5} color={S.dark}/></div>
         </div>
-        <div style={{ width:"46%", position:"relative", zIndex:1 }}>
+        <div className="mayuri-hero-right" style={{ width:"46%", position:"relative", zIndex:1 }}>
           <div style={{ position:"absolute", top:-40, right:-60, bottom:-40, left:"10%", background: S.olive, borderRadius:"90px 0 0 90px", zIndex:0 }} />
           <div style={{ position:"absolute", bottom:"12%", right:"10%", zIndex:3 }}><ZZ w={44} h={22} sw={2.5} color={S.sage}/></div>
           <div style={{ position:"relative", zIndex:2, marginLeft:"6%", transform:"rotate(1.5deg)", boxShadow:"0 20px 60px rgba(0,0,0,.22)", borderRadius:6, overflow:"hidden" }}>
@@ -176,11 +222,11 @@ export default function MayuriHomepage() {
         
         <h2 style={{ textAlign: "center", fontSize: "clamp(40px,5vw,64px)", fontWeight: 900, letterSpacing: "-1.5px", textTransform: "uppercase", margin: "0 0 56px", fontFamily: S.font }}>Customer Favorites</h2>
         
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 24, padding: "0 48px", width: "100%", boxSizing: "border-box" }}>
+        <div className="mayuri-favorites-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 24, padding: "0 48px", width: "100%", boxSizing: "border-box" }}>
           {favorites.map(item=>(
-            <div key={item.key} style={{ background:"#fff", borderRadius:12, overflow:"hidden", boxShadow:"0 4px 20px rgba(0,0,0,.07)", display:"flex", flexDirection:"column" }}>
+            <div key={item.key} className="mayuri-fav-card" style={{ background:"#fff", borderRadius:12, overflow:"hidden", boxShadow:"0 4px 20px rgba(0,0,0,.07)", display:"flex", flexDirection:"column" }}>
               {/* Increased height from 220 to 320 for a taller, undistorted look */}
-              <div style={{ height: 320, overflow:"hidden" }}>
+              <div className="mayuri-fav-img" style={{ height: 320, overflow:"hidden" }}>
                 <img 
                   src={IMGS[item.key]} 
                   alt={item.name} 
@@ -196,8 +242,8 @@ export default function MayuriHomepage() {
                 />
               </div>
               <div style={{ padding:"18px 16px 22px", flex:1 }}>
-                <p style={{ fontWeight:700, fontSize:30, margin:"0 0 8px", textAlign:"center", fontFamily: S.font }}>{item.name}</p>
-                <p style={{ fontSize:25, color:"#555", lineHeight:1.55, margin:0, textAlign:"center" }}>{item.desc}</p>
+                <p className="mayuri-fav-title" style={{ fontWeight:700, fontSize:30, margin:"0 0 8px", textAlign:"center", fontFamily: S.font }}>{item.name}</p>
+                <p className="mayuri-fav-desc" style={{ fontSize:25, color:"#555", lineHeight:1.55, margin:0, textAlign:"center" }}>{item.desc}</p>
               </div>
             </div>
           ))}
@@ -208,7 +254,7 @@ export default function MayuriHomepage() {
         <div style={{ position: "absolute", top: 30, right: 60 }}><ZZ w={44} h={22} sw={2.5} color={S.olive}/></div>
         
         {/* Removed maxWidth and used padding for edge-to-edge flexibility */}
-        <div style={{ display: "flex", alignItems: "center", gap: 64, padding: "0 48px", width: "100%", boxSizing: "border-box" }}>
+        <div className="mayuri-about-inner" style={{ display: "flex", alignItems: "center", gap: 64, padding: "0 48px", width: "100%", boxSizing: "border-box" }}>
           <div style={{ flex: "0 0 50%", borderRadius: 10, overflow: "hidden", boxShadow: "0 12px 40px rgba(0,0,0,.12)" }}>
             <img src={IMGS.thali} alt="Thali spread" style={{ display: "block", width: "100%", objectFit: "cover" }}/>
           </div>
@@ -226,9 +272,9 @@ export default function MayuriHomepage() {
       </section>
 
       {/* ── CATERING & EVENTS ── */}
-      <section id="events" style={{ background: "#fff", padding: "20px 0 0", overflow: "hidden", minWidth: "1200px" }}>
-        <div style={{ display: "flex", alignItems: "stretch", width: "100%" }}>
-          <div style={{ 
+      <section id="events" className="mayuri-events" style={{ background: "#fff", padding: "20px 0 0", overflow: "hidden", minWidth: "1200px" }}>
+        <div className="mayuri-events-inner" style={{ display: "flex", alignItems: "stretch", width: "100%" }}>
+          <div className="mayuri-events-text" style={{ 
             flex: "0 0 600px", 
             padding: "15px 64px 15px 80px", // Reduced vertical padding from 30px to 15px
             display: "flex", 
@@ -314,7 +360,7 @@ export default function MayuriHomepage() {
 
       
       {/* ── FOOTER ── */}
-      <footer style={{ background: S.dark, color: "#fff", padding: "48px 80px", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 24 }}>
+      <footer className="mayuri-footer" style={{ background: S.dark, color: "#fff", padding: "48px 80px", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 24 }}>
         <div>
           <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 10 }}>
             <div style={{ position: "relative", width: 32, height: 32 }}>

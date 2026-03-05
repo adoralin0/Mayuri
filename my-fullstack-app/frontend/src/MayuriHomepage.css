@@ -1,0 +1,164 @@
+/* Mobile-friendly overrides for Mayuri homepage */
+@media (max-width: 900px) {
+  .mayuri-nav {
+    flex-wrap: wrap !important;
+    padding: 12px 20px !important;
+    gap: 16px !important;
+  }
+  .mayuri-nav-main {
+    flex-wrap: wrap !important;
+    gap: 24px !important;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .mayuri-nav-logo img {
+    height: 100px !important;
+    max-height: 28vw;
+  }
+  .mayuri-nav-links {
+    gap: 20px !important;
+  }
+  .mayuri-nav-links a {
+    font-size: 18px !important;
+  }
+  .mayuri-nav-buttons a {
+    width: 70px !important;
+    height: 50px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .mayuri-nav-main {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center;
+  }
+  .mayuri-nav-links {
+    flex-wrap: wrap !important;
+    justify-content: center;
+  }
+  .mayuri-hero {
+    flex-direction: column !important;
+    padding: 32px 20px 48px !important;
+    min-height: auto !important;
+  }
+  .mayuri-hero-text {
+    width: 100% !important;
+    text-align: center;
+  }
+  .mayuri-hero-text h1 {
+    font-size: clamp(36px, 10vw, 56px) !important;
+  }
+  .mayuri-hero-text p {
+    font-size: 18px !important;
+  }
+  .mayuri-hero-text a[href*="google"] {
+    font-size: 22px !important;
+    padding: 14px 32px !important;
+  }
+  .mayuri-hero-image {
+    width: 100% !important;
+    margin-top: 24px;
+  }
+  .mayuri-hero .mayuri-hero-circle {
+    display: none;
+  }
+  .mayuri-favorites {
+    padding: 48px 20px 56px !important;
+  }
+  .mayuri-favorites h2 {
+    font-size: clamp(28px, 6vw, 40px) !important;
+    margin-bottom: 32px !important;
+  }
+  .mayuri-favorites-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+    padding: 0 16px !important;
+  }
+  .mayuri-favorites-grid .fav-card-image {
+    height: 180px !important;
+  }
+  .mayuri-favorites-grid .fav-card-title {
+    font-size: 22px !important;
+  }
+  .mayuri-favorites-grid .fav-card-desc {
+    font-size: 16px !important;
+  }
+  .mayuri-about {
+    padding: 48px 20px 56px !important;
+  }
+  .mayuri-about-inner {
+    flex-direction: column !important;
+    gap: 32px !important;
+    padding: 0 16px !important;
+  }
+  .mayuri-about-inner > div:first-child {
+    flex: none !important;
+    width: 100%;
+  }
+  .mayuri-about h2 {
+    font-size: clamp(22px, 5vw, 32px) !important;
+  }
+  .mayuri-about p {
+    font-size: 18px !important;
+  }
+  .mayuri-events {
+    min-width: 0 !important;
+    padding: 20px 0 !important;
+  }
+  .mayuri-events-inner {
+    flex-direction: column !important;
+  }
+  .mayuri-events-text {
+    flex: none !important;
+    width: 100% !important;
+    padding: 24px 20px !important;
+    min-width: 0 !important;
+  }
+  .mayuri-events-text h2 {
+    font-size: clamp(28px, 6vw, 40px) !important;
+  }
+  .mayuri-events-text p {
+    font-size: 18px !important;
+  }
+  .mayuri-events-text a[href^="tel"] {
+    font-size: 24px !important;
+    padding: 14px 28px !important;
+  }
+  .mayuri-events-text h3 {
+    font-size: 28px !important;
+  }
+  .mayuri-events-image {
+    min-height: 260px !important;
+  }
+  .mayuri-footer {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center;
+    padding: 32px 24px !important;
+    gap: 28px !important;
+  }
+  .mayuri-footer-links {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+  .mayuri-footer-links a {
+    font-size: 20px !important;
+  }
+  .mayuri-footer-info p {
+    font-size: 18px !important;
+  }
+  .mayuri-footer-info span {
+    font-size: 22px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .mayuri-favorites-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .mayuri-nav-buttons {
+    width: 100%;
+    justify-content: center;
+  }
+}
