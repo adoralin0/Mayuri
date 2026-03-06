@@ -76,6 +76,14 @@ html, body {
 }
 
 @media (max-width: 768px) {
+  .mayuri-nav {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .mayuri-nav-buttons {
+    justify-content: center !important;
+    margin-top: 8px;
+  }
   .mayuri-nav-main {
     flex-direction: column !important;
     align-items: center !important;
@@ -113,7 +121,7 @@ html, body {
   }
   .mayuri-hero-image {
     width: 100% !important;
-    margin-top: 24px;
+    margin-top: 56px;
   }
   .mayuri-hero .mayuri-hero-circle {
     display: none;

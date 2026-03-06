@@ -128,7 +128,7 @@ export default function MayuriHomepage() {
           <h1 style={{ fontSize:"clamp(72px,27vw,106px)", fontWeight:900, lineHeight:1.0, letterSpacing:"-2px", margin:"0 0 18px", textTransform:"uppercase", fontFamily: S.font }}>
             THE CAPITAL'S<br/>BEST INDIAN FOOD
           </h1>
-          <p style={{ fontSize:28, fontWeight:500, color:"#6b7280", margin:"0 0 36px" }}>Serving Tallahassee since 2016.</p>
+          <p style={{ fontSize:28, fontWeight:500, color:"#6b7280", margin:"0 0 12px" }}>Serving Tallahassee since 2016.</p>
           {/* ── HERO BUTTON (Full Menu) ── */}
           <a 
             href="https://www.google.com/search?q=mayuri+tallahassee&oq=mayuri+tallahassee+&gs_lcrp=EgZjaHJvbWUyCggAEEUYFhgeGDkyCAgBEEUYJxg7MgcIAhAAGIAEMggIAxAAGBYYHjIICAQQABgWGB4yBggFEEUYPDIGCAYQRRg8MgYIBxBFGDzSAQg0NjYyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#vhid=33:/g/12648s1_7&vssid=menu-viewer-entrypoint" 
