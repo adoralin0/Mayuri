@@ -3,6 +3,42 @@
 html, body {
   overflow-x: hidden;
   -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+/* Global entrance animations */
+@keyframes mh-fade-down {
+  0% { opacity: 0; transform: translateY(-16px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes mh-fade-up {
+  0% { opacity: 0; transform: translateY(24px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.mayuri-nav {
+  animation: mh-fade-down 0.6s ease-out both;
+}
+
+.mayuri-hero-text {
+  animation: mh-fade-up 0.7s ease-out both;
+  animation-delay: 0.1s;
+}
+
+.mayuri-hero-image {
+  animation: mh-fade-up 0.7s ease-out both;
+  animation-delay: 0.2s;
+}
+
+.mayuri-favorites,
+.mayuri-about,
+.mayuri-events,
+.mayuri-footer {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: mh-fade-up 0.7s ease-out both;
+  animation-delay: 0.25s;
 }
 
 /* Consistent scroll target for all section links (nav covers top) */
