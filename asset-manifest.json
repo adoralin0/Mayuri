@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Mayuri/static/css/main.a89fbbb3.css",
-    "main.js": "/Mayuri/static/js/main.525f0c57.js",
+    "main.css": "/Mayuri/static/css/main.b52036c6.css",
+    "main.js": "/Mayuri/static/js/main.aebecb78.js",
     "static/js/453.20359781.chunk.js": "/Mayuri/static/js/453.20359781.chunk.js",
     "index.html": "/Mayuri/index.html",
-    "main.a89fbbb3.css.map": "/Mayuri/static/css/main.a89fbbb3.css.map",
-    "main.525f0c57.js.map": "/Mayuri/static/js/main.525f0c57.js.map",
+    "main.b52036c6.css.map": "/Mayuri/static/css/main.b52036c6.css.map",
+    "main.aebecb78.js.map": "/Mayuri/static/js/main.aebecb78.js.map",
     "453.20359781.chunk.js.map": "/Mayuri/static/js/453.20359781.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a89fbbb3.css",
-    "static/js/main.525f0c57.js"
+    "static/css/main.b52036c6.css",
+    "static/js/main.aebecb78.js"
   ]
 }
