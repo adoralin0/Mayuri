@@ -31,7 +31,7 @@ const ZZ = ({ w=44, h=22, sw=2.5, color="#1a1a1a" }) => (
 const favorites = [
   { key:"biryani",  name:"Mayuri Special Goat Biryani", desc:"Aromatic basmati rice slow-cooked with tender goat, whole spices, caramelized onions & fresh herbs." },
   { key:"kebab",    name:"Chicken Kebab",               desc:"Juicy tandoor-marinated chicken tikka served sizzling with mint chutney & fresh peppers." },
-  { key:"curries",  name:"Savory Curries",              desc:"A rotating selection of rich, chef-crafted curries — from saag paneer to lamb rogan josh." },
+  { key:"curries",  name:"Savory Curries",              desc:"A rotating selection of rich, chef-crafted curries - from saag paneer to lamb rogan josh." },
   { key:"tandoori", name:"Tandoori Chicken",            desc:"Whole chicken marinated overnight in yogurt & spices, charred to perfection in our clay oven." },
 ];
 
@@ -217,7 +217,7 @@ export default function MayuriHomepage() {
               <span style={{ display: "inline-block", marginLeft: 8 }}><ZZ w={32} h={16} sw={2.5} color={S.olive}/></span>
             </h2>
             <p style={{ fontSize: 25, lineHeight: 1.7, color: "#444", textAlign: "center", margin: "0 0 32px" }}>
-              Since 2016, Mayuri's has been Tallahassee's home for authentic Indian cuisine — rich curries, hand-rolled naans, fragrant biryanis, and tandoor-fired classics. Every dish is made with whole spices, fresh ingredients, and recipes rooted in tradition.
+              Since 2016, Mayuri's has been Tallahassee's home for authentic Indian cuisine - rich curries, hand-rolled naans, fragrant biryanis, and tandoor-fired classics. Every dish is made with whole spices, fresh ingredients, and recipes rooted in tradition.
             </p>
           
           </div>
