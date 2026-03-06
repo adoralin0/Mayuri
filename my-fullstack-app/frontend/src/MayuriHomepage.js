@@ -160,7 +160,7 @@ export default function MayuriHomepage() {
           <div style={{ position:"absolute", bottom:-70, left:20 }}><ZZ w={44} h={22} sw={2.5} color={S.dark}/></div>
         </div>
         <div className="mayuri-hero-image" style={{ width:"46%", position:"relative", zIndex:1 }}>
-          <div style={{ position:"absolute", top:-40, right:-60, bottom:-40, left:"10%", background: S.olive, borderRadius:"90px 0 0 90px", zIndex:0 }} />
+          <div className="mayuri-hero-olive-bar" style={{ position:"absolute", top:-40, right:-60, bottom:-40, left:"10%", background: S.olive, borderRadius:"90px 0 0 90px", zIndex:0 }} />
           <div style={{ position:"absolute", bottom:"12%", right:"10%", zIndex:3 }}><ZZ w={44} h={22} sw={2.5} color={S.sage}/></div>
           <div style={{ position:"relative", zIndex:2, marginLeft:"6%", transform:"rotate(1.5deg)", boxShadow:"0 20px 60px rgba(0,0,0,.22)", borderRadius:6, overflow:"hidden" }}>
             <img src={IMGS.hero_food} alt="Mayuri food" style={{ display:"block", width:"100%", objectFit:"cover" }}/>

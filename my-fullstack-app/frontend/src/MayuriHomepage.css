@@ -10,6 +10,20 @@ html, body {
   scroll-margin-top: 100px;
 }
 
+/* Desktop: extend hero bottom, food image and green bar sit lower */
+@media (min-width: 901px) {
+  .mayuri-hero {
+    padding-bottom: 136px !important;
+  }
+  .mayuri-hero-image {
+    margin-top: 64px;
+  }
+  .mayuri-hero-olive-bar {
+    top: 48px !important;
+    bottom: -128px !important;
+  }
+}
+
 /* Nav: spacing between links and delivery buttons */
 .mayuri-nav {
   gap: 28px;
@@ -42,29 +56,42 @@ html, body {
   pointer-events: none !important;
 }
 
+/* Tablet + in-between: avoid cramped desktop and awkward nav wrap */
 @media (max-width: 900px) {
   .mayuri-nav {
+    flex-direction: column !important;
+    align-items: center !important;
     flex-wrap: wrap !important;
     padding: 12px 20px !important;
     gap: 20px !important;
   }
   .mayuri-nav-buttons {
     margin-left: 0 !important;
+    justify-content: center !important;
+    margin-top: 8px;
   }
   .mayuri-nav-main {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center;
     flex-wrap: wrap !important;
     gap: 24px !important;
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
   }
   .mayuri-nav-logo img {
     height: clamp(72px, 18vw, 100px) !important;
   }
   .mayuri-nav-links {
-    gap: 20px !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 12px 24px;
+    max-width: 320px;
+    margin: 0 auto;
   }
   .mayuri-nav-links a {
-    font-size: 18px !important;
+    font-size: 20px !important;
   }
   .mayuri-nav-buttons a {
     width: clamp(44px, 10vw, 70px) !important;
@@ -72,6 +99,75 @@ html, body {
   }
   .mayuri-nav-buttons img {
     width: clamp(28px, 6vw, 48px) !important;
+  }
+  /* Hero: stack so 52/46 doesn't cramp */
+  .mayuri-hero {
+    flex-direction: column !important;
+    padding: 32px 24px 48px !important;
+    min-height: auto !important;
+  }
+  .mayuri-hero-text {
+    width: 100% !important;
+    text-align: center;
+  }
+  .mayuri-hero .mayuri-hero-circle {
+    display: none;
+  }
+  .mayuri-hero-image {
+    width: 100% !important;
+    margin-top: 56px;
+  }
+  .mayuri-hero {
+    padding-bottom: 72px !important;
+  }
+  .mayuri-hero-olive-bar {
+    top: 24px !important;
+    bottom: -104px !important;
+  }
+  .mayuri-hero-text a[href*="google"] {
+    font-size: 26px !important;
+    padding: 14px 36px !important;
+  }
+  /* Favorites: 2 cols so not 4 squished */
+  .mayuri-favorites-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    padding: 0 20px !important;
+  }
+  /* Events: kill min-width so no horizontal scroll */
+  .mayuri-events {
+    min-width: 0 !important;
+    padding: 48px 20px 56px !important;
+  }
+  .mayuri-events-inner {
+    flex-direction: column !important;
+  }
+  .mayuri-events-text {
+    flex: none !important;
+    width: 100% !important;
+    padding: 24px 20px 32px !important;
+    min-width: 0 !important;
+  }
+  .mayuri-events-image {
+    min-height: 260px !important;
+  }
+  /* About: stack */
+  .mayuri-about-inner {
+    flex-direction: column !important;
+    gap: 32px !important;
+    padding: 0 20px !important;
+  }
+  .mayuri-about-inner > div:first-child {
+    flex: none !important;
+    width: 100%;
+  }
+  .mayuri-footer {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center;
+  }
+  .mayuri-footer-links {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
   }
 }
 
@@ -98,6 +194,7 @@ html, body {
     margin: 0 auto;
   }
   .mayuri-nav-links a {
+    font-size: 28px !important;
     white-space: nowrap;
   }
   .mayuri-hero {
@@ -251,7 +348,7 @@ html, body {
     padding: 10px 12px !important;
   }
   .mayuri-nav-links a {
-    font-size: 16px !important;
+    font-size: 26px !important;
     padding: 8px 4px;
     min-height: 44px;
     display: inline-flex;
