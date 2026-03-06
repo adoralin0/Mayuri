@@ -176,6 +176,9 @@ html, body {
     flex-direction: column !important;
     align-items: center !important;
   }
+  .mayuri-nav-logo img {
+    height: clamp(88px, 24vw, 140px) !important;
+  }
   .mayuri-nav-buttons {
     justify-content: center !important;
     margin-top: 8px;
