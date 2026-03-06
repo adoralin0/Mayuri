@@ -85,7 +85,7 @@ export default function MayuriHomepage() {
                 key={l} 
                 href={h} 
                 style={{ 
-                  fontSize: 16, 
+                  fontSize: 32, 
                   fontWeight: 500, 
                   color: S.dark, 
                   textDecoration: "none", 
@@ -104,16 +104,16 @@ export default function MayuriHomepage() {
         <div className="mayuri-nav-buttons" style={{ display: "flex", alignItems: "center", gap: 24 }}>
           <div style={{ display: "flex", gap: 16 }}>
             <a href="https://www.doordash.com/store/mayuri-indian-restaurant-tallahassee-1070545/" target="_blank" rel="noreferrer"
-              style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 85, height: 60, background: S.sage, borderRadius: 10, textDecoration: "none", transition: "all 0.2s" }}
-              onMouseEnter={e => e.target.style.background = S.olive}
-              onMouseLeave={e => e.target.style.background = S.sage}
+              style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 85, height: 60, background: "#F2F4E1", borderRadius: 10, textDecoration: "none", transition: "all 0.2s" }}
+              onMouseEnter={e => e.target.style.background = "#F2F4E1"}
+              onMouseLeave={e => e.target.style.background = "#F2F4E1"}
             >
               <img src={DD_LOGO} alt="DoorDash" style={{ width: 48, height: "auto", objectFit: "contain", pointerEvents: "none" }} />
             </a>
             <a href="https://www.ubereats.com/store/mayuri-indian-restaurant/uS2iSFq8WjmzM5Ygghu-7Q" target="_blank" rel="noreferrer"
-              style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 95, height: 60, background: S.sage, borderRadius: 10, textDecoration: "none", transition: "all 0.2s" }}
-              onMouseEnter={e => e.target.style.background = S.olive}
-              onMouseLeave={e => e.target.style.background = S.sage}
+              style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 95, height: 60, background: "#F2F4E1", borderRadius: 10, textDecoration: "none", transition: "all 0.2s" }}
+              onMouseEnter={e => e.target.style.background = "#F2F4E1"}
+              onMouseLeave={e => e.target.style.background = "#F2F4E1"}
             >
               <img src={UE_LOGO} alt="Uber Eats" style={{ width: 58, height: "auto", objectFit: "contain", pointerEvents: "none" }} />
             </a>
@@ -127,10 +127,10 @@ export default function MayuriHomepage() {
         <div className="mayuri-hero-circle" style={{ position:"absolute", top:"50%", left:"42%", transform:"translate(-50%,-50%)", width:640, height:640, border:"1.5px solid #d8ddd0", borderRadius:"50%", pointerEvents:"none", zIndex:0 }} />
         <div className="mayuri-hero-text" style={{ width:"60%", position:"relative", zIndex:1 }}>
           <div style={{ marginBottom:28 }}><ZZ w={44} h={22} sw={2.5} color={S.dark}/></div>
-          <h1 style={{ fontSize:"clamp(48px,5vw,64px)", fontWeight:700, lineHeight:1.0, letterSpacing:"-0.02em", margin:"0 0 18px", textTransform:"uppercase", fontFamily: S.fontHead }}>
+          <h1 style={{ fontSize:"clamp(68px,10vw,74px)", fontWeight:700, lineHeight:1.0, letterSpacing:"-0.02em", margin:"0 0 18px", textTransform:"uppercase", fontFamily: S.fontHead }}>
             THE CAPITAL'S<br/>BEST INDIAN FOOD
           </h1>
-          <p style={{ fontSize: 18, fontWeight: 500, color: S.softSlate, margin:"0 0 12px", fontFamily: S.fontBody }}>Serving Tallahassee since 2016.</p>
+          <p style={{ fontSize: 28, fontWeight: 500, color: S.softSlate, margin:"0 0 12px", fontFamily: S.fontBody }}>Serving Tallahassee since 2016.</p>
           {/* ── HERO BUTTON (Full Menu) ── */}
           <a 
             href="https://www.google.com/search?q=mayuri+tallahassee&oq=mayuri+tallahassee+&gs_lcrp=EgZjaHJvbWUyCggAEEUYFhgeGDkyCAgBEEUYJxg7MgcIAhAAGIAEMggIAxAAGBYYHjIICAQQABgWGB4yBggFEEUYPDIGCAYQRRg8MgYIBxBFGDzSAQg0NjYyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#vhid=33:/g/12648s1_7&vssid=menu-viewer-entrypoint" 
@@ -173,11 +173,11 @@ export default function MayuriHomepage() {
       </section>
 
       {/* ── CUSTOMER FAVORITES ── */}
-      <section id="favorites" className="mayuri-favorites" style={{ background: S.cream, padding: "80px 0 90px", position: "relative", overflow: "hidden" }}>
+      <section id="favorites" className="mayuri-favorites" style={{ background: "#F2F4E1", padding: "80px 0 90px", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", top: "-20px", left: "-30px", width: 180, height: 180, background: "radial-gradient(circle, rgba(180,190,120,.25) 0%, transparent 70%)", borderRadius: "50%", pointerEvents: "none" }}/>
         <div style={{ position: "absolute", bottom: "-20px", right: "-20px", width: 200, height: 200, background: "radial-gradient(circle, rgba(180,190,120,.2) 0%, transparent 70%)", borderRadius: "50%", pointerEvents: "none" }}/>
         
-        <h2 style={{ textAlign: "center", fontSize: "clamp(40px,5vw,64px)", fontWeight: 700, letterSpacing: "-0.02em", textTransform: "uppercase", margin: "0 0 56px", fontFamily: S.fontHead, color: S.deepCharcoal }}>Customer Favorites</h2>
+        <h2 style={{ textAlign: "center", fontSize: "clamp(50px,6vw,78px)", fontWeight: 700, letterSpacing: "-0.02em", textTransform: "uppercase", margin: "0 0 56px", fontFamily: S.fontHead, color: S.deepCharcoal }}>Customer Favorites</h2>
         
         <div className="mayuri-favorites-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 24, padding: "0 48px", width: "100%", boxSizing: "border-box" }}>
           {favorites.map(item=>(
@@ -198,15 +198,15 @@ export default function MayuriHomepage() {
                 />
               </div>
               <div style={{ padding:"18px 16px 22px", flex:1 }}>
-                <p className="fav-card-title" style={{ fontWeight: 700, fontSize: 22, margin:"0 0 8px", textAlign:"center", fontFamily: S.fontHead, color: S.primaryGreen }}>{item.name}</p>
-                <p className="fav-card-desc" style={{ fontSize: 16, color: S.softSlate, lineHeight: 1.55, margin: 0, textAlign: "center", fontFamily: S.fontBody }}>{item.desc}</p>
+                <p className="fav-card-title" style={{ fontWeight: 700, fontSize: 28, margin:"0 0 8px", textAlign:"center", fontFamily: S.fontHead, color: S.primaryGreen }}>{item.name}</p>
+                <p className="fav-card-desc" style={{ fontSize: 20, color: S.softSlate, lineHeight: 1.55, margin: 0, textAlign: "center", fontFamily: S.fontBody }}>{item.desc}</p>
               </div>
             </div>
           ))}
         </div>
       </section>
       {/* ── ABOUT ── */}
-      <section id="about" className="mayuri-about" style={{ background: S.cream, padding: "80px 0 90px", position: "relative", overflow: "hidden" }}>
+      <section id="about" className="mayuri-about" style={{ background: "#F2F4E1", padding: "80px 0 90px", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", top: 30, right: 60 }}><ZZ w={44} h={22} sw={2.5} color={S.olive}/></div>
         
         <div className="mayuri-about-inner" style={{ display: "flex", alignItems: "center", gap: 64, padding: "0 48px", width: "100%", boxSizing: "border-box" }}>
@@ -214,11 +214,11 @@ export default function MayuriHomepage() {
             <img src={IMGS.thali} alt="Thali spread" style={{ display: "block", width: "100%", objectFit: "cover" }}/>
           </div>
           <div style={{ flex: 1 }}>
-            <h2 style={{ fontSize: "clamp(28px,3.5vw,42px)", fontWeight: 700, lineHeight: 1.2, margin: "0 0 20px", textAlign: "center", fontFamily: S.fontHead, color: S.deepCharcoal }}>
+            <h2 style={{ fontSize: "clamp(36px,4.5vw,54px)", fontWeight: 700, lineHeight: 1.2, margin: "0 0 20px", textAlign: "center", fontFamily: S.fontHead, color: S.deepCharcoal }}>
               Welcome to <span style={{ color: S.primaryGreen }}>Mayuri's</span> Indian Restaurant
               <span style={{ display: "inline-block", marginLeft: 8 }}><ZZ w={32} h={16} sw={2.5} color={S.primaryGreen}/></span>
             </h2>
-            <p style={{ fontSize: 18, lineHeight: 1.7, color: S.softSlate, textAlign: "center", margin: "0 0 32px", fontFamily: S.fontBody }}>
+            <p style={{ fontSize: 22, lineHeight: 1.7, color: S.softSlate, textAlign: "center", margin: "0 0 32px", fontFamily: S.fontBody }}>
               Since 2016, Mayuri's has been Tallahassee's home for authentic Indian cuisine - rich curries, hand-rolled naans, fragrant biryanis, and tandoor-fired classics. Every dish is made with whole spices, fresh ingredients, and recipes rooted in tradition.
             </p>
           
@@ -238,7 +238,7 @@ export default function MayuriHomepage() {
             position: "relative" 
           }}>
             <h2 style={{ 
-              fontSize: "48px", 
+              fontSize: "60px", 
               fontWeight: 700, 
               margin: "0 0 10px", 
               lineHeight: 1.1, 
@@ -248,7 +248,7 @@ export default function MayuriHomepage() {
               We cater and host events
             </h2>
             <p style={{ 
-              fontSize: 18, 
+              fontSize: 22, 
               lineHeight: 1.5, 
               color: S.softSlate, 
               margin: "0 0 15px", 
@@ -266,7 +266,7 @@ export default function MayuriHomepage() {
                   textDecoration: "none", 
                   borderRadius: 999, 
                   padding: "18px 38px", 
-                  fontSize: 18, 
+                  fontSize: 22, 
                   fontWeight: 700, 
                   fontFamily: S.fontHead,
                   transition: "all 0.2s ease",
@@ -287,10 +287,10 @@ export default function MayuriHomepage() {
             </div>
             
             <div style={{ marginTop: 32, borderTop: "1px solid #eee", paddingTop: 24 }}>
-              <h3 style={{ fontSize: "28px", fontWeight: 700, margin: "0 0 4px", fontFamily: S.fontHead, color: S.deepCharcoal }}>
+              <h3 style={{ fontSize: "36px", fontWeight: 700, margin: "0 0 4px", fontFamily: S.fontHead, color: S.deepCharcoal }}>
                   Want to Host Events?
               </h3>
-              <p style={{ fontSize: 18, color: S.softSlate, margin: "0", fontFamily: S.fontBody }}>
+              <p style={{ fontSize: 22, color: S.softSlate, margin: "0", fontFamily: S.fontBody }}>
                   Check out what we can provide!
               </p>
             </div>
@@ -323,15 +323,15 @@ export default function MayuriHomepage() {
               <div style={{ position: "absolute", top: 0, left: 5, width: 19, height: 19, border: `2px solid ${S.sage}`, borderRadius: "50%" }} />
               <div style={{ position: "absolute", bottom: 0, left: 0, width: 19, height: 19, background: S.olive, borderRadius: "50%", opacity: .8 }} />
             </div>
-            <span style={{ fontWeight: 700, fontSize: 22, fontFamily: S.fontHead }}>Mayuri Indian Restaurant</span>
+            <span style={{ fontWeight: 700, fontSize: 28, fontFamily: S.fontHead }}>Mayuri Indian Restaurant</span>
           </div>
-          <p style={{ fontSize: 16, color: "#aaa", margin: "0 0 4px", fontFamily: S.fontBody }}>Serving Tallahassee since 2016</p>
-          <p style={{ fontSize: 16, color: "#aaa", margin: 0, fontFamily: S.fontBody }}>1324 Simpson Ave, Tallahassee, FL 32301</p>
+          <p style={{ fontSize: 20, color: "#aaa", margin: "0 0 4px", fontFamily: S.fontBody }}>Serving Tallahassee since 2016</p>
+          <p style={{ fontSize: 20, color: "#aaa", margin: 0, fontFamily: S.fontBody }}>1324 Simpson Ave, Tallahassee, FL 32301</p>
         </div>
 
         <div className="mayuri-footer-links" style={{ display: "flex", gap: 32 }}>
           {[["Favorites", "#favorites"], ["Event Hosting", "#events"], ["About", "#about"]].map(([l, h]) => (
-            <a key={l} href={h} style={{ fontSize: 16, color: "#ccc", textDecoration: "none", fontFamily: S.fontBody, transition: "color 0.2s" }}
+            <a key={l} href={h} style={{ fontSize: 20, color: "#ccc", textDecoration: "none", fontFamily: S.fontBody, transition: "color 0.2s" }}
               onMouseEnter={e => e.target.style.color = S.sage}
               onMouseLeave={e => e.target.style.color = "#ccc"}>{l}</a>
           ))}
@@ -341,13 +341,13 @@ export default function MayuriHomepage() {
           <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
             {/* DoorDash Button Hover. */}
             <a href="https://www.doordash.com/store/mayuri-indian-restaurant-tallahassee-1070545/" target="_blank" rel="noreferrer"
-              style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 56, height: 44, background: S.sage, borderRadius: 8, textDecoration: "none", transition: "all 0.2s ease" }}
+              style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 56, height: 44, background: "#F2F4E1", borderRadius: 8, textDecoration: "none", transition: "all 0.2s ease" }}
               onMouseEnter={e => {
-                e.target.style.background = S.olive;
+                e.target.style.background = "#F2F4E1";
                 e.target.style.transform = "translateY(-2px)";
               }}
               onMouseLeave={e => {
-                e.target.style.background = S.sage;
+                e.target.style.background = "#F2F4E1";
                 e.target.style.transform = "translateY(0)";
               }}
             >
@@ -356,13 +356,13 @@ export default function MayuriHomepage() {
 
             {/* Uber Eats Button Hover */}
             <a href="https://www.ubereats.com/store/mayuri-indian-restaurant/uS2iSFq8WjmzM5Ygghu-7Q" target="_blank" rel="noreferrer"
-              style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 66, height: 44, background: S.sage, borderRadius: 8, textDecoration: "none", transition: "all 0.2s ease" }}
+              style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 66, height: 44, background: "#F2F4E1", borderRadius: 8, textDecoration: "none", transition: "all 0.2s ease" }}
               onMouseEnter={e => {
-                e.target.style.background = S.olive;
+                e.target.style.background = "#F2F4E1";
                 e.target.style.transform = "translateY(-2px)";
               }}
               onMouseLeave={e => {
-                e.target.style.background = S.sage;
+                e.target.style.background = "#F2F4E1";
                 e.target.style.transform = "translateY(0)";
               }}
             >

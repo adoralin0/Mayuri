@@ -41,13 +41,21 @@ html, body {
   animation-delay: 0.25s;
 }
 
+/* Full Menu button: black text on all views */
+.mayuri-hero-text a[href*="google"] {
+  color: #000 !important;
+}
+
 /* Consistent scroll target for all section links (nav covers top) */
 #favorites, #about, #events {
   scroll-margin-top: 100px;
 }
 
-/* Desktop: extend hero bottom, food image and green bar sit lower */
+/* Desktop: smaller logo, extend hero bottom, food image and green bar sit lower */
 @media (min-width: 901px) {
+  .mayuri-nav-logo img {
+    height: clamp(80px, 10vw, 120px) !important;
+  }
   .mayuri-hero {
     padding-bottom: 136px !important;
   }
@@ -119,15 +127,7 @@ html, body {
     height: clamp(72px, 18vw, 100px) !important;
   }
   .mayuri-nav-links {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-    gap: 12px 24px;
-    max-width: 320px;
-    margin: 0 auto;
-  }
-  .mayuri-nav-links a {
-    font-size: 20px !important;
+    display: none !important;
   }
   .mayuri-nav-buttons a {
     width: clamp(44px, 10vw, 70px) !important;
@@ -163,6 +163,7 @@ html, body {
   .mayuri-hero-text a[href*="google"] {
     font-size: 26px !important;
     padding: 14px 36px !important;
+    color: #000 !important;
   }
   /* Favorites: 2 cols so not 4 squished */
   .mayuri-favorites-grid {
@@ -225,16 +226,7 @@ html, body {
     text-align: center;
   }
   .mayuri-nav-links {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-    gap: 12px 24px;
-    max-width: 320px;
-    margin: 0 auto;
-  }
-  .mayuri-nav-links a {
-    font-size: 28px !important;
-    white-space: nowrap;
+    display: none !important;
   }
   .mayuri-hero {
     flex-direction: column !important;
@@ -246,14 +238,15 @@ html, body {
     text-align: center;
   }
   .mayuri-hero-text h1 {
-    font-size: clamp(36px, 10vw, 56px) !important;
+    font-size: clamp(44px, 10vw, 64px) !important;
   }
   .mayuri-hero-text p {
-    font-size: 18px !important;
+    font-size: 20px !important;
   }
   .mayuri-hero-text a[href*="google"] {
     font-size: 22px !important;
     padding: 14px 32px !important;
+    color: #000 !important;
   }
   .mayuri-hero-image {
     width: 100% !important;
@@ -266,7 +259,7 @@ html, body {
     padding: 48px 20px 56px !important;
   }
   .mayuri-favorites h2 {
-    font-size: clamp(28px, 6vw, 40px) !important;
+    font-size: clamp(36px, 7vw, 50px) !important;
     margin-bottom: 32px !important;
   }
   .mayuri-favorites-grid {
@@ -278,10 +271,10 @@ html, body {
     height: 180px !important;
   }
   .mayuri-favorites-grid .fav-card-title {
-    font-size: 22px !important;
+    font-size: 28px !important;
   }
   .mayuri-favorites-grid .fav-card-desc {
-    font-size: 16px !important;
+    font-size: 20px !important;
   }
   .mayuri-about {
     padding: 48px 20px 56px !important;
@@ -296,10 +289,10 @@ html, body {
     width: 100%;
   }
   .mayuri-about h2 {
-    font-size: clamp(22px, 5vw, 32px) !important;
+    font-size: clamp(30px, 6vw, 42px) !important;
   }
   .mayuri-about p {
-    font-size: 18px !important;
+    font-size: 22px !important;
   }
   .mayuri-events {
     min-width: 0 !important;
@@ -315,17 +308,17 @@ html, body {
     min-width: 0 !important;
   }
   .mayuri-events-text h2 {
-    font-size: clamp(28px, 6vw, 40px) !important;
+    font-size: clamp(36px, 7vw, 50px) !important;
   }
   .mayuri-events-text p {
-    font-size: 18px !important;
+    font-size: 22px !important;
   }
   .mayuri-events-text a[href^="tel"] {
-    font-size: 24px !important;
+    font-size: 28px !important;
     padding: 14px 28px !important;
   }
   .mayuri-events-text h3 {
-    font-size: 28px !important;
+    font-size: 36px !important;
   }
   .mayuri-events-image {
     min-height: 260px !important;
@@ -342,13 +335,13 @@ html, body {
     justify-content: center !important;
   }
   .mayuri-footer-links a {
-    font-size: 20px !important;
+    font-size: 24px !important;
   }
   .mayuri-footer-info p {
-    font-size: 18px !important;
+    font-size: 22px !important;
   }
   .mayuri-footer-info span {
-    font-size: 22px !important;
+    font-size: 28px !important;
   }
 }
 
@@ -361,18 +354,19 @@ html, body {
     justify-content: center;
   }
   .mayuri-hero-text h1 {
-    font-size: clamp(28px, 8vw, 44px) !important;
+    font-size: clamp(32px, 8vw, 48px) !important;
   }
   .mayuri-hero-text a[href*="google"] {
     font-size: 18px !important;
     padding: 12px 24px !important;
+    color: #000 !important;
     min-height: 44px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
   }
   .mayuri-events-text a[href^="tel"] {
-    font-size: 20px !important;
+    font-size: 24px !important;
     padding: 12px 24px !important;
     min-height: 44px;
     display: inline-flex;
@@ -385,13 +379,6 @@ html, body {
 @media (max-width: 360px) {
   .mayuri-nav {
     padding: 10px 12px !important;
-  }
-  .mayuri-nav-links a {
-    font-size: 26px !important;
-    padding: 8px 4px;
-    min-height: 44px;
-    display: inline-flex;
-    align-items: center;
   }
   .mayuri-hero {
     padding: 24px 16px 40px !important;
