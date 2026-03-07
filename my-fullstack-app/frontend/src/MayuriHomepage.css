@@ -100,28 +100,25 @@ html, body {
   pointer-events: none !important;
 }
 
-/* Tablet + in-between: avoid cramped desktop and awkward nav wrap */
+/* Tablet + in-between: single row — logo left, delivery buttons right */
 @media (max-width: 900px) {
   .mayuri-nav {
-    flex-direction: column !important;
+    flex-direction: row !important;
     align-items: center !important;
-    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    flex-wrap: nowrap !important;
     padding: 0 16px !important;
-    gap: 20px !important;
+    gap: 12px !important;
   }
   .mayuri-nav-buttons {
     margin-left: 0 !important;
-    justify-content: center !important;
-    margin-top: 8px;
+    justify-content: flex-end !important;
+    margin-top: 0 !important;
+    flex: none !important;
   }
   .mayuri-nav-main {
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center;
-    flex-wrap: wrap !important;
-    gap: 24px !important;
-    width: 100%;
-    justify-content: center;
+    flex: none !important;
+    justify-content: flex-start !important;
   }
   .mayuri-nav-logo img {
     height: clamp(64px, 16vw, 88px) !important;
@@ -210,20 +207,19 @@ html, body {
 
 @media (max-width: 768px) {
   .mayuri-nav {
-    flex-direction: column !important;
+    flex-direction: row !important;
     align-items: center !important;
+    justify-content: space-between !important;
   }
   .mayuri-nav-logo img {
     height: clamp(72px, 20vw, 120px) !important;
   }
   .mayuri-nav-buttons {
-    justify-content: center !important;
-    margin-top: 8px;
+    justify-content: flex-end !important;
+    margin-top: 0 !important;
   }
   .mayuri-nav-main {
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center;
+    justify-content: flex-start !important;
   }
   .mayuri-nav-links {
     display: none !important;
@@ -350,8 +346,8 @@ html, body {
     grid-template-columns: 1fr !important;
   }
   .mayuri-nav-buttons {
-    width: 100%;
-    justify-content: center;
+    width: auto !important;
+    justify-content: flex-end !important;
   }
   .mayuri-hero-text h1 {
     font-size: clamp(32px, 8vw, 48px) !important;

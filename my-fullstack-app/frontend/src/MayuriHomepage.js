@@ -101,14 +101,14 @@ export default function MayuriHomepage() {
         <div className="mayuri-nav-buttons" style={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "flex-end", gap: 24 }}>
           <div style={{ display: "flex", gap: 16 }}>
             <a href="https://www.doordash.com/store/mayuri-indian-restaurant-tallahassee-1070545/" target="_blank" rel="noreferrer"
-              style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 85, height: 60, background: "#F2F4E1", borderRadius: 10, textDecoration: "none", transition: "all 0.2s" }}
+              style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 85, height: 60, background: "#F2F4E1", borderRadius: 24, textDecoration: "none", transition: "all 0.2s" }}
               onMouseEnter={e => e.target.style.background = "#F2F4E1"}
               onMouseLeave={e => e.target.style.background = "#F2F4E1"}
             >
               <img src={DD_LOGO} alt="DoorDash" style={{ width: 48, height: "auto", objectFit: "contain", pointerEvents: "none" }} />
             </a>
             <a href="https://www.ubereats.com/store/mayuri-indian-restaurant/uS2iSFq8WjmzM5Ygghu-7Q" target="_blank" rel="noreferrer"
-              style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 95, height: 60, background: "#F2F4E1", borderRadius: 10, textDecoration: "none", transition: "all 0.2s" }}
+              style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 95, height: 60, background: "#F2F4E1", borderRadius: 24, textDecoration: "none", transition: "all 0.2s" }}
               onMouseEnter={e => e.target.style.background = "#F2F4E1"}
               onMouseLeave={e => e.target.style.background = "#F2F4E1"}
             >
@@ -120,7 +120,7 @@ export default function MayuriHomepage() {
 
       {/* ── HERO ── */}
       
-      <section className="mayuri-hero" style={{ position:"relative", display:"flex", alignItems:"center", justifyContent:"space-between", padding:"48px 48px 64px", minHeight:"88vh", overflow:"hidden" }}>
+      <section className="mayuri-hero" style={{ position:"relative", display:"flex", alignItems:"flex-start", justifyContent:"space-between", padding:"28px 48px 64px", minHeight:"88vh", overflow:"hidden" }}>
         <div className="mayuri-hero-circle" style={{ position:"absolute", top:"50%", left:"42%", transform:"translate(-50%,-50%)", width:640, height:640, border:"1.5px solid #d8ddd0", borderRadius:"50%", pointerEvents:"none", zIndex:0 }} />
         <div className="mayuri-hero-text" style={{ width:"60%", position:"relative", zIndex:1 }}>
           <div style={{ marginBottom:28 }}><ZZ w={44} h={22} sw={2.5} color={S.dark}/></div>
@@ -134,15 +134,16 @@ export default function MayuriHomepage() {
             target="_blank" 
             rel="noreferrer"
             style={{ 
-              display: "inline-block", 
+display: "inline-block", 
               background: S.primaryGreen, 
               color: S.warmWhite, 
               textDecoration: "none", 
-              borderRadius: 999, 
+              borderRadius: 24, 
               padding: "16px 44px", 
-              fontSize: 18, 
+              fontSize: 22, 
               fontWeight: 700, 
               fontFamily: S.fontHead,
+              textTransform: "uppercase",
               transition: "transform 0.2s, background 0.2s" 
             }}
             onMouseEnter={e => {
@@ -178,7 +179,7 @@ export default function MayuriHomepage() {
         
         <div className="mayuri-favorites-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 24, padding: "0 48px", width: "100%", boxSizing: "border-box" }}>
           {favorites.map(item=>(
-            <div key={item.key} style={{ background: S.warmWhite, borderRadius: 12, overflow: "hidden", boxShadow: "0 8px 24px rgba(0,0,0,.1)", display: "flex", flexDirection: "column" }}>
+            <div key={item.key} style={{ background: S.warmWhite, borderRadius: 0, overflow: "hidden", boxShadow: "0 8px 24px rgba(0,0,0,.1)", display: "flex", flexDirection: "column" }}>
               <div className="fav-card-image" style={{ height: 320, overflow:"hidden" }}>
                 <img 
                   src={IMGS[item.key]} 
@@ -224,7 +225,7 @@ export default function MayuriHomepage() {
       </section>
 
       {/* ── CATERING & EVENTS ── */}
-      <section id="events" className="mayuri-events" style={{ background: "#fff", padding: "20px 0 0", overflow: "hidden", minWidth: "1200px" }}>
+      <section id="events" className="mayuri-events" style={{ background: "#E4E7D4", padding: "20px 0 0", overflow: "hidden", minWidth: "1200px" }}>
         <div className="mayuri-events-inner" style={{ display: "flex", alignItems: "stretch", width: "100%" }}>
           <div className="mayuri-events-text" style={{ 
             flex: "0 0 600px", 
@@ -257,15 +258,16 @@ export default function MayuriHomepage() {
             <div>
               <a href="tel:+18504029993"
                 style={{ 
-                  display: "inline-block", 
+display: "inline-block", 
                   background: S.primaryGreen, 
                   color: "#000", 
                   textDecoration: "none", 
-                  borderRadius: 999, 
+                  borderRadius: 24, 
                   padding: "18px 38px", 
                   fontSize: 22, 
                   fontWeight: 700, 
                   fontFamily: S.fontHead,
+                  textTransform: "uppercase",
                   transition: "all 0.2s ease",
                   marginBottom: 32
                 }}
@@ -338,7 +340,7 @@ export default function MayuriHomepage() {
           <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
             {/* DoorDash Button Hover. */}
             <a href="https://www.doordash.com/store/mayuri-indian-restaurant-tallahassee-1070545/" target="_blank" rel="noreferrer"
-              style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 56, height: 44, background: "#F2F4E1", borderRadius: 8, textDecoration: "none", transition: "all 0.2s ease" }}
+              style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 56, height: 44, background: "#F2F4E1", borderRadius: 22, textDecoration: "none", transition: "all 0.2s ease" }}
               onMouseEnter={e => {
                 e.target.style.background = "#F2F4E1";
                 e.target.style.transform = "translateY(-2px)";
@@ -353,7 +355,7 @@ export default function MayuriHomepage() {
 
             {/* Uber Eats Button Hover */}
             <a href="https://www.ubereats.com/store/mayuri-indian-restaurant/uS2iSFq8WjmzM5Ygghu-7Q" target="_blank" rel="noreferrer"
-              style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 66, height: 44, background: "#F2F4E1", borderRadius: 8, textDecoration: "none", transition: "all 0.2s ease" }}
+              style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 66, height: 44, background: "#F2F4E1", borderRadius: 22, textDecoration: "none", transition: "all 0.2s ease" }}
               onMouseEnter={e => {
                 e.target.style.background = "#F2F4E1";
                 e.target.style.transform = "translateY(-2px)";
