@@ -148,7 +148,7 @@ html, body {
   }
   .mayuri-hero-image {
     width: 100% !important;
-    margin-top: 96px !important;
+    margin-top: 56px;
   }
   .mayuri-hero {
     padding-bottom: 72px !important;
@@ -246,7 +246,7 @@ html, body {
   }
   .mayuri-hero-image {
     width: 100% !important;
-    margin-top: 96px !important;
+    margin-top: 56px;
   }
   .mayuri-hero .mayuri-hero-circle {
     display: none;
