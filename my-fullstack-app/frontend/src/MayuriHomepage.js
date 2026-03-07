@@ -85,7 +85,7 @@ export default function MayuriHomepage() {
                 key={l} 
                 href={h} 
                 style={{ 
-                  fontSize: 32, 
+                  fontSize: 22, 
                   fontWeight: 500, 
                   color: S.dark, 
                   textDecoration: "none", 
