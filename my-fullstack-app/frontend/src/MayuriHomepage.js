@@ -120,9 +120,9 @@ export default function MayuriHomepage() {
 
       {/* ── HERO ── */}
       
-      <section className="mayuri-hero" style={{ position:"relative", display:"flex", alignItems:"flex-start", justifyContent:"space-between", padding:"28px 48px 64px", minHeight:"88vh", overflow:"hidden" }}>
+      <section className="mayuri-hero" style={{ position:"relative", display:"flex", alignItems:"flex-start", justifyContent:"space-between", padding:"28px 48px 48px", minHeight:"72vh", overflow:"hidden" }}>
         <div className="mayuri-hero-circle" style={{ position:"absolute", top:"50%", left:"42%", transform:"translate(-50%,-50%)", width:640, height:640, border:"1.5px solid #d8ddd0", borderRadius:"50%", pointerEvents:"none", zIndex:0 }} />
-        <div className="mayuri-hero-text" style={{ width:"60%", position:"relative", zIndex:1 }}>
+        <div className="mayuri-hero-text" style={{ width:"60%", position:"relative", zIndex:1, marginTop: 72 }}>
           <div style={{ marginBottom:28 }}><ZZ w={44} h={22} sw={2.5} color={S.dark}/></div>
           <h1 style={{ fontSize:"clamp(68px,10vw,74px)", fontWeight:700, lineHeight:1.0, letterSpacing:"-0.02em", margin:"0 0 18px", textTransform:"uppercase", fontFamily: S.fontHead }}>
             THE CAPITAL'S<br/>BEST INDIAN FOOD
@@ -159,7 +159,7 @@ display: "inline-block",
           </a>
           <div style={{ position:"absolute", bottom:-70, left:20 }}><ZZ w={44} h={22} sw={2.5} color={S.dark}/></div>
         </div>
-        <div className="mayuri-hero-image" style={{ width:"40%", position:"relative", zIndex:1 }}>
+        <div className="mayuri-hero-image" style={{ width:"34%", position:"relative", zIndex:1, marginTop: -24 }}>
           <div className="mayuri-hero-olive-bar" style={{ position:"absolute", top:-40, right:-60, bottom:-40, left:"10%", background: S.primaryGreen, borderRadius:"90px 0 0 90px", zIndex:0 }} />
           <div style={{ position:"absolute", bottom:"12%", right:"10%", zIndex:3 }}><ZZ w={44} h={22} sw={2.5} color={S.sage}/></div>
           <div style={{ position:"relative", zIndex:2, marginLeft:"6%", transform:"rotate(1.5deg)", boxShadow:"0 20px 60px rgba(0,0,0,.22)", borderRadius:24, overflow:"hidden" }}>
@@ -289,8 +289,9 @@ display: "inline-block",
               <h3 style={{ fontSize: "36px", fontWeight: 700, margin: "0 0 4px", fontFamily: S.fontHead, color: S.deepCharcoal }}>
                   Want to Host Events?
               </h3>
-              <p style={{ fontSize: 22, color: S.softSlate, margin: "0", fontFamily: S.fontBody }}>
+              <p style={{ fontSize: 22, color: S.softSlate, margin: "0", fontFamily: S.fontBody, display: "flex", alignItems: "center", gap: 8 }}>
                   Check out what we can provide!
+                  <span style={{ fontSize: 28, color: S.primaryGreen, lineHeight: 1 }} aria-hidden="true">→</span>
               </p>
             </div>
           </div>
