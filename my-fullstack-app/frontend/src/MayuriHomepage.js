@@ -62,46 +62,43 @@ export default function MayuriHomepage() {
       <nav className="mayuri-nav" style={{ 
         display: "flex", 
         alignItems: "center", 
-        justifyContent: "space-between", 
-        padding: "12px 64px", 
+        padding: "0 32px", 
         background: "rgba(255,255,255,0.9)", 
         position: "sticky", 
         top: 0, 
         zIndex: 100, 
         borderBottom: "none" 
       }}>
-        <div className="mayuri-nav-main" style={{ display: "flex", alignItems: "center", gap: 60 }}>
+        <div className="mayuri-nav-main" style={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "flex-start" }}>
           <div className="mayuri-nav-logo" style={{ display: "flex", alignItems: "center" }}>
             <img
               src="images/mayuri_logo.png"
               alt="Mayuri Logo"
-              style={{ height: "180px", width: "auto", objectFit: "contain" }}
+              style={{ height: "140px", width: "auto", objectFit: "contain" }}
             />
           </div>
-          <div className="mayuri-nav-links" style={{ display: "flex", gap: 40 }}>
-            {/* Keeping Catering here as a standard link */}
-            {[["Favorites", "#favorites"], ["Event Hosting", "#events"], ["About", "#about"], ["Catering", "#events"]].map(([l, h]) => (
-              <a 
-                key={l} 
-                href={h} 
-                style={{ 
-                  fontSize: 22, 
-                  fontWeight: 500, 
-                  color: S.dark, 
-                  textDecoration: "none", 
-                  fontFamily: S.fontNav, 
-                  transition: "color 0.2s" 
-                }}
-                onMouseEnter={e => e.target.style.color = S.olive}
-                onMouseLeave={e => e.target.style.color = S.dark}
-              >
-                {l}
-              </a>
-            ))}
-          </div>
         </div>
-        
-        <div className="mayuri-nav-buttons" style={{ display: "flex", alignItems: "center", gap: 24 }}>
+        <div className="mayuri-nav-links" style={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "center", gap: 40 }}>
+          {[["Favorites", "#favorites"], ["Event Hosting", "#events"], ["About", "#about"], ["Catering", "#events"]].map(([l, h]) => (
+            <a 
+              key={l} 
+              href={h} 
+              style={{ 
+                fontSize: 22, 
+                fontWeight: 500, 
+                color: S.dark, 
+                textDecoration: "none", 
+                fontFamily: S.fontNav, 
+                transition: "color 0.2s" 
+              }}
+              onMouseEnter={e => e.target.style.color = S.olive}
+              onMouseLeave={e => e.target.style.color = S.dark}
+            >
+              {l}
+            </a>
+          ))}
+        </div>
+        <div className="mayuri-nav-buttons" style={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "flex-end", gap: 24 }}>
           <div style={{ display: "flex", gap: 16 }}>
             <a href="https://www.doordash.com/store/mayuri-indian-restaurant-tallahassee-1070545/" target="_blank" rel="noreferrer"
               style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 85, height: 60, background: "#F2F4E1", borderRadius: 10, textDecoration: "none", transition: "all 0.2s" }}
@@ -262,7 +259,7 @@ export default function MayuriHomepage() {
                 style={{ 
                   display: "inline-block", 
                   background: S.primaryGreen, 
-                  color: S.warmWhite, 
+                  color: "#000", 
                   textDecoration: "none", 
                   borderRadius: 999, 
                   padding: "18px 38px", 

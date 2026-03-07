@@ -54,7 +54,7 @@ html, body {
 /* Desktop: smaller logo, extend hero bottom, food image and green bar sit lower */
 @media (min-width: 901px) {
   .mayuri-nav-logo img {
-    height: clamp(80px, 10vw, 120px) !important;
+    height: clamp(70px, 9vw, 100px) !important;
   }
   .mayuri-hero {
     padding-bottom: 136px !important;
@@ -80,7 +80,7 @@ html, body {
 
 /* Logo and delivery icons: scale consistently with viewport (override inline styles) */
 .mayuri-nav-logo img {
-  height: clamp(72px, 12vw, 180px) !important;
+  height: clamp(60px, 10vw, 140px) !important;
   width: auto !important;
   object-fit: contain !important;
 }
@@ -106,7 +106,7 @@ html, body {
     flex-direction: column !important;
     align-items: center !important;
     flex-wrap: wrap !important;
-    padding: 12px 20px !important;
+    padding: 0 16px !important;
     gap: 20px !important;
   }
   .mayuri-nav-buttons {
@@ -124,7 +124,7 @@ html, body {
     justify-content: center;
   }
   .mayuri-nav-logo img {
-    height: clamp(72px, 18vw, 100px) !important;
+    height: clamp(64px, 16vw, 88px) !important;
   }
   .mayuri-nav-links {
     display: none !important;
@@ -214,7 +214,7 @@ html, body {
     align-items: center !important;
   }
   .mayuri-nav-logo img {
-    height: clamp(88px, 24vw, 140px) !important;
+    height: clamp(72px, 20vw, 120px) !important;
   }
   .mayuri-nav-buttons {
     justify-content: center !important;
@@ -378,7 +378,7 @@ html, body {
 /* Very small phones: tighter padding and tap-friendly links */
 @media (max-width: 360px) {
   .mayuri-nav {
-    padding: 10px 12px !important;
+    padding: 0 8px !important;
   }
   .mayuri-hero {
     padding: 24px 16px 40px !important;
